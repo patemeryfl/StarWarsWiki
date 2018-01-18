@@ -6,14 +6,14 @@ import Header from '../components/Header'
 import Main from '../components/Main'
 import Footer from '../components/Footer'
 
-import ApolloClient, { createNetworkInterface } from 'apollo-client';
 import { ApolloProvider } from 'react-apollo';
+import { ApolloClient } from 'apollo-client';
+import { HttpLink } from 'apollo-link-http';
+import { InMemoryCache } from 'apollo-cache-inmemory';
 
 const client = new ApolloClient({
-  networkInterface: createNetworkInterface({
-    uri: 'http://localhost:3000',
-  }),
-  connectToDevTools: true,
+  link: new HttpLink({ uri: 'https://mpjk0plp9.lp.gql.zone/graphql' }),
+  cache: new InMemoryCache()
 });
 
 class Template extends React.Component {
