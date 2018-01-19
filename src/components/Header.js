@@ -8,15 +8,15 @@ const Header = (props) => (
                 <h1>StarWars Wikipeda</h1>
                 <p>An interactive wiki for StarWars fans </p>
             </div>
+            <nav>
+                <ul>
+                    <li><a href="javascript:;" onClick={() => {props.onOpenArticle('intro')}}>Films</a></li>
+                    <li><a href="javascript:;" onClick={() => {props.onOpenArticle('work')}}>Planets</a></li>
+                    <li><a href="javascript:;" onClick={() => {props.onOpenArticle('about')}}>Characters</a></li>
+                    <li><a href="javascript:;" onClick={() => {props.onOpenArticle('contact')}}>Vehicles</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="javascript:;" onClick={() => {props.onOpenArticle('intro')}}>Films</a></li>
-                <li><a href="javascript:;" onClick={() => {props.onOpenArticle('work')}}>Planets</a></li>
-                <li><a href="javascript:;" onClick={() => {props.onOpenArticle('about')}}>Characters</a></li>
-                <li><a href="javascript:;" onClick={() => {props.onOpenArticle('contact')}}>Vehicles</a></li>
-            </ul>
-        </nav>
     </header>
 )
 

@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'react-apollo';
 import gql from 'graphql-tag';
 
-function Hero(props) {
+function Vehicle(props) {
     let {name, height, mass, appearsIn, friends, starships} = props.data
     return (
         <div style={{ flex: '1 0 300px' }}>
@@ -24,7 +24,7 @@ function Hero(props) {
     )
   }
 
-  let HeroList = function HeroList({ data }) {
+  let VehicleList = function HeroList({ data }) {
     return (
         <div style={{ flexWrap: 'wrap', display: 'flex'}}>
           {
@@ -36,7 +36,7 @@ function Hero(props) {
   };
 
   export default graphql(gql`
-  query HeroQuery {
+  query VehicleQuery {
     human(id: "1000") {
         name,
         friends { name },
@@ -46,4 +46,4 @@ function Hero(props) {
         starships { name }
           }
   }
-`)(HeroList);
+`)(VehicleList);
